@@ -15,7 +15,4 @@ export class Cidade {
 
     @OneToOne(() => Rota, rota => rota.cidade_destino_id)
     rotaDestino: Rota
-
-
-    
 }

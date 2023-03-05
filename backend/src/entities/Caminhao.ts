@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from 'typeorm';
+import { Rota } from './Rota';
 
 @Entity('caminhao')
 export class Caminhao {
@@ -11,4 +12,7 @@ export class Caminhao {
     
     @Column()
     motorista: string;  
+
+    @OneToOne(() => Rota, rota => rota.caminhao_id)
+    rota: Rota
 }
