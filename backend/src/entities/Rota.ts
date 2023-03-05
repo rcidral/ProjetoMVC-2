@@ -11,6 +11,9 @@ export class Rota {
     @Column()
     data: Date;
 
+    @Column()
+    preco : number;
+
     @OneToOne(() => Cidade, cidade => cidade.id)
     @JoinColumn({ name: 'cidade_origem_id' })
     cidade_origem_id: Cidade

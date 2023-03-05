@@ -13,6 +13,12 @@ export class Caminhao {
     @Column()
     motorista: string;  
 
+    @Column()
+    rotas: number;
+
+    @Column()
+    faturamento: number;
+
     @OneToOne(() => Rota, rota => rota.caminhao_id)
     rota: Rota
 }
